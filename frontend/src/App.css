@@ -1,0 +1,60 @@
+body {
+  overflow-x: hidden;
+}
+.Container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin-top: -100px;
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  will-change: overflow;
+}
+
+.Left,
+.Right {
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.Left::-webkit-scrollbar,
+.Right::-webkit-scrollbar {
+  display: none;
+}
+
+.Left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+
+.Right {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+img {
+  width: 25vw;
+  height: 25vw;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .Container {
+    display: inline;
+  }
+
+  .Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18vw;
+  }
+}
